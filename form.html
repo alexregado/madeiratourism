@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Cabin&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="main.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- BARRA DE NAVEGAÇÃO -->
+    <div id="nav">
+        <div class="nav_left">
+        <img src="images/flagMadeira.png" alt="Bandeira da Madeira" class="nav_flag">
+        <p class="nav_text">Visit Madeira!</p>
+        </div>
+        <div class="nav_center">
+        <p class="nav_bar"><a href="index.html" class="nav_bar_a">Home</a></p>
+        <p class="nav_bar"><a href="form.html" class="nav_bar_a">Formulário</a></p>
+        <p class="nav_bar"><a href="contacts.html" class="nav_bar_a">Contactos</a></p>
+        </div>
+    </div>
+
+
+    <!-- IMAGEM DE FUNDO -->
+    <img src="images/view.jpg" alt="Fundo website" class="background_img">
+
+    <!-- TEXTO INTRODUTÓRIO DO FORM -->
+    <div class="text_form">
+        Se está a precisar de umas férias veio ao sítio certo! A Ozires está a oferecer uma viagem à Madeira com tudo incluído por 7 noites.<br>Inscreva-se já e não perca esta oportunidade para conhecer este pequeno paraíso sem custos!
+    </div>
+
+    <!-- FORM -->
+    <div class="form1">
+        <form action="http://localhost/php/Trabalho/forms.php" method="post" id="myForm">
+        <fieldset>
+            <label for="name">Nome Completo</label><br>
+            <input type="text" name="name" id="name_place" placeholder="Insira o seu nome completo" required><br><br><br>
+        <fieldset> 
+            <label for="birth_date">Data de nascimento</label><br>
+            <input type="date" name="birth_date" value="birth_date"><br><br>
+        </fieldset>
+        <fieldset>
+            <label>Género:</label><br>
+            <label for="gender">Feminino</label>
+            <input type="radio" name="gender" value="female"><br>
+            <label for="gender">Masculino</label>
+            <input type="radio" name="gender" value="male"><br>
+            <label for="gender">Outro</label>
+            <input type="radio" name="gender" value="other"><br><br>
+        </fieldset>
+            <label for="like_range">De 0 a 20 quanto é que quer visitar a Madeira? </label><br>
+            <div class="slidecontainer">
+            <input type="range" min="0" max="20" name="like_range" class="slider" id="myRange" required><br>
+            </div><br><br>
+            <input type="submit" value="Submeter!" class="button_submit" id="btn_sub">
+            <br>
+        </fieldset>
+        <br>
+        </form>
+    </div>
+
+    
+    <script>
+        /* IMPORTAR O FORMULÁRIO */
+        const myForm = document.getElementById('myForm');
+
+        /* SUBMISSÃO DO FORM SEM IR PARA O FICHEIRO PHP */
+        myForm.addEventListener("submit", (e) =>{
+            e.preventDefault();
+
+            const request = new XMLHttpRequest();
+            request.open("post", "http://localhost/php/Trabalho/forms.php");
+            request.onload = function () {
+                console.log(request.responseText);
+            }
+            request.send(new FormData(myForm));
+            /* MOSTRA NA CONSOLA QUE OS DADOS FORAM SUBMETIDOS E É LANÇADO UM ALERTA */
+            console.log("Form has been submited!");
+            alert('O formulário foi submetido com sucesso! Obrigado pela sua participação e boa sorte!')
+
+        });
+    
+    </script>
+</body>
+</html>
