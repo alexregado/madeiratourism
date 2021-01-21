@@ -1,9 +1,12 @@
 html, body {
     margin: 0;
     font-family: 'Cabin', sans-serif !important;
-    background-color: rgba(160, 241, 255, 0.075);
+    background-color: rgba(194, 246, 255, 0.061);
     z-index: -5555;
-    
+    background-size: cover;
+    background-position: center;
+    background-image: url('images/sunset.jpg');
+    background-repeat: no-repeat;
 }
 
 main{
@@ -12,18 +15,36 @@ main{
 
 /* IMAGEM DE FUNDO  */
 .background_img{
+
+    z-index: -999;
+    position: absolute;
+    overflow: hidden;
+    max-height: 140%;
+    width: 100%;
+    object-fit: cover;
+    /*
     position: absolute;
     z-index: 3;
     margin: 0;
     max-width: 100%;
     opacity: 0.9;
-    height: 300px;
+    height: 400px;
     width: 100%;
-    object-fit: cover;
+    object-fit: cover; */
 
 }
 
-/* BARRA DE NAVEGAÇÃO DO TOPO */
+.background_img_form{
+    z-index: -999;
+    position: absolute;
+    overflow: hidden;
+    max-height: 140%;
+    width: 100%;
+    object-fit: cover;
+}
+
+/*
+/* BARRA DE NAVEGAÇÃO DO TOPO 
 #nav{
     display: flex; 
     background-color: rgb(0, 94, 184);
@@ -32,24 +53,24 @@ main{
     margin: 0px;
     border: 2px solid white;
     z-index: 99999;
-}
+}*/
 
-/* COLAR AO LADO ESQUERDO PARTE DA BANDEIRA E LETRAS */
+/* COLAR AO LADO ESQUERDO PARTE DA BANDEIRA E LETRAS 
 .nav_left{
     display: flex;
     margin-left: 0px;
-}
+}*/
 
-/* CENTRAR O MENU */
+/* CENTRAR O MENU 
 .nav_center{
     width: 500px;
     display: flex;
     margin: auto;
     margin-right: -3px;
     height: 91px;
-}
+}*/
 
-/* BOTÕES DO MENU */
+/* BOTÕES DO MENU 
 .nav_bar {
     font-family: 'Cabin', sans-serif !important;
     font-size: 30px;
@@ -63,8 +84,8 @@ main{
     margin-top: 8px;
     margin-left: 10px;
     margin-right: 10px;
-}
-
+}*/
+/*
 .nav_bar:hover{
     background-color: rgb(255, 233, 0);
     color: rgb(0, 94, 184) !important;
@@ -85,7 +106,9 @@ main{
     
 
    
-}
+}*/
+
+
 
 /* BANDEIRA DA MADEIRA */
 .nav_flag{
@@ -94,7 +117,7 @@ main{
     border-right: 2px solid white;
 }
 
-/* TEXTO AO LADO DA BANDEIRA */
+/* TEXTO AO LADO DA BANDEIRA 
 .nav_text{
     margin-left: 0px;
     margin-top: 8px;
@@ -103,6 +126,58 @@ main{
     font-size: 30px;
     color: white;
 }
+*/
+
+
+/* HEADER DA TATI */
+.text_nav{
+    font-family: 'Rock Salt', cursive !important;
+    font-family: 'Rock Salt', cursive !important;
+    font-size: 27px;
+    color: rgb(194, 55, 55);
+    margin-top: -17px;
+}
+
+*{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+}
+
+.header{
+    width: 100%;
+    height: 1px;
+    background-image: url(imagemfundo.jpg);
+    background-size: cover;
+}
+
+.navbar{
+    width: 100%;
+    padding: 20px;
+    position: fixed;
+    top: 0px;
+    transition: 0.5s;
+    z-index: 9999;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar ul li{
+    list-style-type: none;
+    display: inline-block;
+    padding: 10px 50px;
+    color: white;
+    font-size: 24px;
+    font-family: sans-serif;
+    cursor: pointer; 
+    border-radius: 10px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover{
+    background: rgb(139, 0, 0);
+}
+
 
 
 
@@ -122,7 +197,7 @@ main{
     font-size: 50px;
     text-align: center;
     color: rgb(0, 0, 0);
-    margin-top: 300px;
+    margin-top: 180px;
     background-color: none;
     margin-bottom: 50px;
     z-index: 9999;
@@ -133,12 +208,16 @@ main{
     width: 680px;
     margin: auto;
     text-align: center;
+    background: linear-gradient(90deg, rgba(238, 253, 255, 0.1) 0%, rgba(193, 216, 219, 0.1) 100%);  
+    backdrop-filter: blur(5px);
+    z-index: 9999;
+    border-radius: 17px;
 
 }
 
 .places{
     text-align: center;
-    font-size: 24px;
+    font-size: 27px;
     font-weight: 700;
     color: black;
     margin-top: 50px;
@@ -172,6 +251,15 @@ main{
     box-shadow: 0 0 1em ;
 }
 
+.container_2:hover{
+    transform: scale(1.3);
+    opacity: 1;
+}
+
+.text_cont:hover{
+    opacity: 1;
+}
+
 .container{
     width: 915px;
     display: flex !important;
@@ -179,7 +267,9 @@ main{
     flex-wrap: wrap;
     margin: auto;
     margin-top: 8px;
+    z-index: 9999;
 }
+
  .location{
     font-size: 20px;
     font-weight: 700;
@@ -193,11 +283,14 @@ main{
     width: 678px;
     text-align: center;
     font-size: 23px;
-    border: 2px solid white;
+    border: 2px solid rgba(194, 55, 55);
     border-radius: 9px;
     color: white;
-    background-color: rgb(0, 95, 184);
-    box-shadow: 0 0 1em ;
+    box-shadow: 1em ;
+    padding: 20px 20px 20px 20px;
+    border-radius: 17px;
+    background: linear-gradient(90deg, rgba(238, 253, 255, 0.1) 0%, rgba(193, 216, 219, 0.1) 100%);
+    backdrop-filter: blur(5px);
 }
 
 .button_main{
@@ -205,15 +298,15 @@ main{
     font-size: 17px;
     font-weight: 700;
     background-color: white;
-    color: darkred;
+    color: rgb(139, 0, 0);
     margin-top: 13px;
     margin-bottom: 13px;
     border-radius: 25px;
 }
 
 .button_main:hover{
-    background-color: rgba(253, 253, 123, 0.575);
-    color: blue;
+    background-color: rgb(139, 0, 0);
+    color: white;
 }
 
 
@@ -236,16 +329,49 @@ main{
     border-radius: 50px;
     background-color: #ffffff, 0.5; /* ÚLTIMO VALOR É RELATIVO A TRANSPARÊNCIA */
     text-align: center;
-    font-weight: 600;
+    font-weight: 500;
     font-size: 20px;
-    color: #000000;
-    text-shadow: 3px white;
+    color: rgb(0, 0, 0);
+    text-shadow: 1px white;
     font-family: 'Cabin', sans-serif;
     margin: auto;
     margin-top: 50px;
     background-color: #ffffff;
-    background: linear-gradient(90deg, rgba(156,156,156,0.3393732492997199) 0%, rgba(178,218,223,0.7259278711484594) 100%); 
+    background: linear-gradient(90deg, rgba(238, 253, 255, 0.1) 0%, rgba(193, 216, 219, 0.1) 100%); 
+    backdrop-filter: blur(5px);
     z-index: 9999;
+}
+
+.form_result{
+    width: 600px;
+    display: block;
+    border: 2px #ffffff;
+    border-radius: 50px;
+    background-color: #ffffff, 0.5; /* ÚLTIMO VALOR É RELATIVO A TRANSPARÊNCIA */
+    text-align: center;
+    font-weight: 500;
+    font-size: 20px;
+    color: #fff;
+    text-shadow: 1px white;
+    font-family: 'Cabin', sans-serif;
+    margin: auto;
+    margin-top: 50px;
+    padding-top: 15px;
+    background-color: #ffffff;
+    background: linear-gradient(90deg, rgba(238, 253, 255, 0.1) 0%, rgba(193, 216, 219, 0.1) 100%);  
+    backdrop-filter: blur(5px);
+    z-index: 9999;
+}
+
+.results{
+    font-family: 'Cabin', sans-serif;
+    font-weight: 800;
+    padding: 10px 25px 10px 25px;
+    background-color: rgb(139, 0, 0);
+    color: white;
+    border-radius: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 /* ÁREA À VOLTA DO FORM */
@@ -313,13 +439,82 @@ fieldset{
     text-align: center;
     width: 700px;
     margin: auto;
-    margin-top: 315px;
+    margin-top: 155px;
    }
-
-
-
-
-
-
-   /* MENU RETIRADO DE https://codepen.io/ahart814/pen/wvBEQpy */
    
+
+
+
+
+
+
+ /* Footer */ 
+footer {
+    background-color: #666666;
+    bottom: 0px;
+    width: 100%;
+    min-height: 95px;
+    border-top: 5px solid #ca2924;
+}
+
+.footerflex{
+    display: flex;
+    justify-content: space-between;
+}
+
+.linkIscap {
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+.footerimg {
+    width: 167px;
+}
+
+.footerflex a {
+    text-decoration: none;
+}
+
+.footerflex p {
+    color: white;
+    margin-top: 0;
+}
+
+.footerflex a:visited {
+    color: white;
+}
+
+.fbLogo, .liLogo, .igLogo{
+    border-radius: 42px;
+    width: 46px;
+    max-width: 46px;
+}
+
+
+/* CONTACTOS */
+.contactos{
+    font-size: 24px;
+    margin-top: 105px;
+    width: 680px;
+    margin: auto;
+    text-align: center;
+    background: linear-gradient(90deg, rgba(238, 253, 255, 0.1) 0%, rgba(193, 216, 219, 0.1) 100%);  
+    backdrop-filter: blur(5px);
+    z-index: 9999;
+    border-radius: 17px;
+    margin-top: 300px;
+    margin-bottom: 220px;
+    font-weight: 600;
+}
+
+.contactos a{
+    text-decoration: none;
+    color: black;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+#gmap_canvas{
+    width: 100%;
+    height: 450px;
+    margin-bottom: 35px;
+}
