@@ -61,11 +61,19 @@
             font-size: 50px;
         }
     </style>
+
+
+
+
+
+
     <div class="alex" style="">
         <p>O vencedor do sorteio é:<br>
     <span class="winner"><?php echo $rand_name ?></span><br><br>
     Obrigado pela sua participação!</p>
     </div>
 
+
+    
 </body>
 </html>

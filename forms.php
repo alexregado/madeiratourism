@@ -27,6 +27,8 @@
     
     //IMPORTAR AS VARIÁVEIS DO HTML PARA O PHP
     $name = $_POST['name'];
+    $number = $_POST['number'];
+    $email = $_POST['email'];
     $birth_date = $_POST['birth_date'];
     $gender = $_POST['gender'];
     $like_range = $_POST['like_range'];
@@ -35,8 +37,14 @@
     echo $name, $birth_date, $gender, $like_range;
     
     //INTRODUZIR OS DADOS RETIRADOS DO FORM NA BASE DE DADOS
-    $sql = "INSERT INTO dbsite SET name = '$name', birthDate = '$birth_date', gender = '$gender', likeRange = '$like_range' ";
+    $sql = "INSERT INTO dbsite SET name = '$name', number = '$number', email = '$email', birthDate = '$birth_date', gender = '$gender', likeRange = '$like_range' ";
     $sql = $conn->query($sql);
+
+    $sql1 = "SELECT name FROM dbsite by RAND() limit 1";
+    $sql1 = $conn->query($sql1);
+
+    
+
 
 
     ?> 
